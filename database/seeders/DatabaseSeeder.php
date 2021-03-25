@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CommitteesSeeder::class);
         $this->call(LeadersSeeder::class);
-        $this->call(ContactsSeeder::class);
-        $this->call(MailingsSeeder::class);
+        // $this->call(ContactsSeeder::class);
+        // $this->call(MailingsSeeder::class);
         $this->call(PostsSeeder::class);
         $this->call(ThanksSeeder::class);
     }

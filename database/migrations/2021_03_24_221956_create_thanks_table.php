@@ -15,8 +15,8 @@ class CreateThanksTable extends Migration
     {
         Schema::create('thanks', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 30);
-            $table->string('content', 30);
+            $table->string('name', 50);
+            $table->string('content', 100);
         });
     }
 
