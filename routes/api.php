@@ -31,9 +31,9 @@ Route::apiResources([
     "/mailing" => MailingController::class,
 ]);
 
-Route::group(['middleware' => ['CheckPassword']], function () {
-    Route::post("/committee/{id}/addleader", [LeaderController::class, 'addLeader']);
-    Route::post("/committee/{id}/removeleader", [LeaderController::class, 'removeLeader']);
-    Route::post("/committee/{id}/addmember", [MembersController::class, 'addMember']);
-    Route::post("/committee/{id}/removemember", [MembersController::class, 'removeMember']);
-});
+// Route::group(['middleware' => ['CheckPassword']], function () {
+Route::post("/committee/{id}/addleader", [LeaderController::class, 'addLeader']);
+Route::post("/committee/{id}/removeleader", [LeaderController::class, 'removeLeader']);
+Route::post("/committee/{id}/addmember", [MembersController::class, 'addMember']);
+Route::post("/committee/{id}/removemember", [MembersController::class, 'removeMember']);
+// });
