@@ -30,6 +30,6 @@ class LeadersExportController extends Controller
         $data = Leader::all();
         // echo $data;
         $pdf = PDF::loadView('leaders', ['data' => $data]);
-        return $pdf->download('document.pdf');
+        return $pdf->stream('document.pdf');
     }
 }
