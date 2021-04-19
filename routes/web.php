@@ -22,6 +22,7 @@ Route::get("/form", [FormController::class, 'index'])->name("form.index");
 Route::post("/submitform", [FormController::class, 'store'])->name("form.submit");
 
 // Route For Exporting The Data Inside CSV, XLSX, XLS File
-Route::get("/export/leaders/{id}/xlsx", [LeadersExportController::class, 'exportXLSX']);
-Route::get("/export/leaders/{id}/csv", [LeadersExportController::class, 'exportCSV']);
-Route::get("/export/leaders/{id}/xls", [LeadersExportController::class, 'exportXLS']);
+Route::get("/export/leaders/{id}/xlsx", [LeadersExportController::class, 'exportXLSX'])->name('export.xlsx');
+Route::get("/export/leaders/{id}/csv", [LeadersExportController::class, 'exportCSV'])->name('export.csv');
+Route::get("/export/leaders/{id}/xls", [LeadersExportController::class, 'exportXLS'])->name('export.xls');
+Route::get("/export/leaders/pdf", [LeadersExportController::class, 'exportPDF'])->name('export.pdf');
